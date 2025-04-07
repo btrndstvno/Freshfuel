@@ -3,25 +3,26 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
+// Ganti path image agar sesuai GitHub Pages (public path)
 const smoothies = [
   {
     name: "Beauty Burst",
     main: "Collagen for youthful skin",
-    image: "/images/Beauty Burst.jpg",
+    image: `${process.env.PUBLIC_URL}/images/Beauty Burst.jpg`,
     ingredients: ["Blueberry", "Strawberry", "Raspberry", "Fresh & Sour!"],
     badge: "best seller!"
   },
   {
     name: "Tropical Immune",
     main: "Vitamin C boost for sunny days",
-    image: "/images/Tropical Immune.jpg",
+    image: `${process.env.PUBLIC_URL}/images/Tropical Immune.jpg`,
     ingredients: ["Mango", "Pineapple", "Orange", "Turmeric"],
     badge: "new!"
   },
   {
     name: "Active Fuel",
     main: "Detox and refresh naturally",
-    image: "/images/Active Fuel.png",
+    image: `${process.env.PUBLIC_URL}/images/Active Fuel.png`,
     ingredients: ["Spinach", "Kale", "Apple", "Green Spirulina"],
     badge: "fan favorite"
   }
@@ -75,7 +76,7 @@ export default function FreshFuelPage() {
             className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40"
           >
             <div className="relative w-[90%] md:w-[600px] bg-white rounded-2xl p-6 text-center border border-blue-800 shadow-lg">
-              {/* Promo Sudut Kiri */}
+              {/* Promo Banner */}
               <div className="absolute top-0 -left-20 -rotate-12 text-white bg-red-800 py-1 px-6 text-xl font-bold rounded-r-3xl shadow-lg">
                 GET 20% OFF
                 <div className="text-xs italic">your first smoothie!</div>
@@ -90,7 +91,7 @@ export default function FreshFuelPage() {
               </button>
 
               {/* Logo */}
-              <img src="/logo.png" alt="FreshFuel" className="mx-auto h-10 my-4" />
+              <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="FreshFuel" className="mx-auto h-10 my-4" />
 
               {/* Isi Pesan */}
               <p className="text-lg text-gray-700 leading-relaxed mb-4">
@@ -98,7 +99,7 @@ export default function FreshFuelPage() {
                 Join our club now to enjoy <span className="text-pink-700 font-semibold">exclusive smoothie deals</span> and <span className="text-blue-800 font-semibold">stay up to date</span> with Freshfuel!
               </p>
 
-              {/* Tombol JOIN NOW! */}
+              {/* Tombol JOIN NOW */}
               <a
                 href="https://whatsapp.com/channel/0029Vb9bTcS4inozDwqJx525"
                 target="_blank"
