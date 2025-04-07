@@ -148,12 +148,22 @@ export default function App() {
           </span>
         </div>
 
-        <div className="flex justify-center items-center gap-6 mt-8">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-8">
+          {/* Tombol Sebelumnya */}
           <button onClick={prev} className="text-pink-500 bg-white rounded-full p-3 shadow">
             <ChevronLeft size={32} />
           </button>
+
+          {/* Gambar Smoothie */}
           <div className="flex items-center justify-center gap-6 w-full max-w-4xl overflow-hidden">
-            <img src={prevSmoothie.image} alt="prev" className="h-60 opacity-40 scale-90 transition duration-300" />
+            {/* Gambar Sebelumnya */}
+            <img
+              src={prevSmoothie.image}
+              alt="prev"
+              className="h-40 md:h-60 opacity-40 scale-90 transition duration-300 hidden md:block"
+            />
+
+            {/* Gambar Tengah */}
             <motion.div
               key={current.name}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -164,7 +174,7 @@ export default function App() {
               <img
                 src={current.image}
                 alt={current.name}
-                className="h-80 drop-shadow-xl rounded-2xl z-10"
+                className="h-60 md:h-80 drop-shadow-xl rounded-2xl z-10"
               />
               {current.badge && (
                 <span className="absolute top-2 left-2 z-20 bg-red-700 text-white px-2 py-1 rounded-full text-xs font-bold shadow-md">
@@ -173,8 +183,15 @@ export default function App() {
               )}
             </motion.div>
 
-            <img src={nextSmoothie.image} alt="next" className="h-60 opacity-40 scale-90 transition duration-300" />
+            {/* Gambar Berikutnya */}
+            <img
+              src={nextSmoothie.image}
+              alt="next"
+              className="h-40 md:h-60 opacity-40 scale-90 transition duration-300 hidden md:block"
+            />
           </div>
+
+          {/* Tombol Berikutnya */}
           <button onClick={next} className="text-pink-500 bg-white rounded-full p-3 shadow">
             <ChevronRight size={32} />
           </button>
