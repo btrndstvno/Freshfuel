@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Freshfuel/static/css/main.ad38cc21.css",
-    "main.js": "/Freshfuel/static/js/main.e181488e.js",
+    "main.js": "/Freshfuel/static/js/main.15718d25.js",
     "index.html": "/Freshfuel/index.html",
     "main.ad38cc21.css.map": "/Freshfuel/static/css/main.ad38cc21.css.map",
-    "main.e181488e.js.map": "/Freshfuel/static/js/main.e181488e.js.map"
+    "main.15718d25.js.map": "/Freshfuel/static/js/main.15718d25.js.map"
   },
   "entrypoints": [
     "static/css/main.ad38cc21.css",
-    "static/js/main.e181488e.js"
+    "static/js/main.15718d25.js"
   ]
 }
