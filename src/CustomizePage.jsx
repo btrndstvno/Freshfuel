@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // untuk navigasi ke Home
+import { Link } from "react-router-dom";
 
 // Warna real berdasarkan color tone Google / warna khas bahan
 const ingredientColors = {
@@ -102,21 +102,36 @@ export default function CustomizePage() {
   };
 
   return (
-    <div className="min-h-screen bg-white p-8 text-center">
-      {/* Tombol Home */}
-      <div className="flex justify-start mb-4">
-        <Link
-          to="/"
-          className="inline-flex items-center gap-2 text-blue-900 font-semibold text-sm hover:underline hover:text-blue-600 transition"
-        >
-          <span className="text-lg">🏠</span>
-          <span>Back to Home</span>
-        </Link>
-      </div>
+    <div className="min-h-screen bg-white font-sans">
 
-      <h1 className="text-3xl font-bold text-red-700 mb-8">Let's build your smoothie!</h1>
+      {/* ✅ Navbar */}
+      <header className="sticky top-0 z-50 bg-white shadow-md w-full">
+        <div className="w-full flex items-center justify-between px-4 md:px-6 py-4">
+          <Link
+            to="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >
+            <img
+              src={`${process.env.PUBLIC_URL}/images/Logo Freshfuel.png`}
+              alt="FreshFuel Logo"
+              className="h-14 md:h-16 w-auto object-contain cursor-pointer"
+            />
+          </Link>
+          <div className="flex space-x-4">
+            <Link to="/">
+              <button className="px-4 py-2 border rounded-full hover:bg-black hover:text-white transition">Our Menu</button>
+            </Link>
+            <button className="px-4 py-2 border rounded-full hover:bg-black hover:text-white transition">About Us</button>
+            <button className="px-4 py-2 border rounded-full hover:bg-black hover:text-white transition">Support</button>
+          </div>
+        </div>
+      </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {/* 🧪 Judul */}
+      <h1 className="text-3xl font-bold text-red-700 mb-8 text-center mt-10">Let's build your smoothie!</h1>
+
+      {/* 🧪 Main Builder Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4 pb-16">
         {/* Kolom Kiri - Bahan */}
         <div>
           {Object.entries(ingredients).map(([category, items], idx) => (
@@ -150,7 +165,7 @@ export default function CustomizePage() {
           ))}
         </div>
 
-        {/* Kolom Tengah - Gelas dan Form */}
+        {/* Kolom Tengah - Gelas + Form */}
         <div className="flex flex-col items-center justify-between gap-6">
           {/* Gelas */}
           <div className="relative h-[400px] w-40 border-4 border-black rounded-b-3xl overflow-hidden bg-white flex flex-col justify-end">
