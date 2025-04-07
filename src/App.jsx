@@ -191,7 +191,7 @@ export default function App() {
 
       {/* ✅ About Us Section */}
       <section id="about-us" className="py-24 px-6 bg-gradient-to-r from-[#fff0d4] to-[#fbd2a8]">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-10 text-red-800">ABOUT US</h2>
+        <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-10 text-red-800">Event Highlight</h2>
         <div className="relative max-w-6xl mx-auto overflow-hidden">
           <div className="flex transition-all duration-500" style={{ transform: `translateX(-${aboutIndex * 100}%)` }}>
             {aboutSlides.map((slide, index) => (
