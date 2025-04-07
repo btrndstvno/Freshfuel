@@ -2,7 +2,7 @@
   "name": "freshfuel-react",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://btrndstvno.github.io/Freshfuel",
+  "homepage": "https://freshfuelweb.netlify.app",
   "dependencies": {
     "framer-motion": "^10.12.16",
     "lucide-react": "^0.321.0",
