@@ -161,13 +161,18 @@ export default function App() {
               transition={{ duration: 0.4 }}
               className="relative pb-10"
             >
-              <img src={current.image} alt={current.name} className="h-80 drop-shadow-xl rounded-2xl z-10" />
+              <img
+                src={current.image}
+                alt={current.name}
+                className="h-80 drop-shadow-xl rounded-2xl z-10"
+              />
               {current.badge && (
-                <span className="absolute -bottom-4 left-6 bg-red-700 text-white px-2 py-1 rounded-full text-xs font-bold rotate-[-20deg]">
+                <span className="absolute top-2 left-2 z-20 bg-red-700 text-white px-2 py-1 rounded-full text-xs font-bold shadow-md">
                   {current.badge}
                 </span>
               )}
             </motion.div>
+
             <img src={nextSmoothie.image} alt="next" className="h-60 opacity-40 scale-90 transition duration-300" />
           </div>
           <button onClick={next} className="text-pink-500 bg-white rounded-full p-3 shadow">
